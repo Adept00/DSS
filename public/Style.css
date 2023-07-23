@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+nav {
+    background-color: #4267B2;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    width: 120px;
+    font-weight: bold;
+    margin-right: 10px;
+    line-height: 30px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 5px;
+}
+
+.input-group button {
+    padding: 5px 10px;
+    background-color: #4267B2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.input-group button:hover {
+    background-color: #3A5C9B;
+}
+
+.grade-list {
+    list-style: none;
+    padding: 0;
+}
+
+.grade-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.grade-item:hover {
+    background-color: #f7f7f7;
+}
+
+.grade-item.selected {
+    background-color: #EDEEF0;
+}
+
+.grade-item span {
+    margin-right: 10px;
+}
+
+.grade-item button {
+    padding: 2px 5px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.grade-item button:hover {
+    background-color: #d32f2f;
+}
+
+.content-details {
+    margin-top: 20px;
+}
+
+.content-details h2 {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #4267B2;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .input-group label {
+        width: 100px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+    }
+
+    .grade-list {
+        font-size: 14px;
+    }
+
+    .details-section,
+    .history-section {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .input-group label {
+        width: 80px;
+    }
+
+    .input-group input {
+        font-size: 12px;
+    }
+
+    .grade-list {
+        font-size: 12px;
+    }
+}
