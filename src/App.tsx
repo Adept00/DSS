@@ -6,7 +6,7 @@ interface Grade {
   facultyNumber: string;
   subject: string;
   grade: string | number;
-  field5: Date | string; // Add field5 as Date or string type
+  field5: Date | string; 
 }
 
 interface HistoryItem {
@@ -23,7 +23,7 @@ const GradeManagementSystem: React.FC = () => {
     facultyNumber: '1 23456',
     subject: 'Math',
     grade: 'A',
-    field5: new Date(), // Default value for field5
+    field5: new Date(), 
   };
 
   const [grades, setGrades] = useState<Grade[]>([initialStudent]);
@@ -31,7 +31,7 @@ const GradeManagementSystem: React.FC = () => {
   const [field2, setField2] = useState('');
   const [field3, setField3] = useState('');
   const [field4, setField4] = useState('');
-  const [field5, setField5] = useState<Date | string>(initialStudent.field5); // Initialize field5 with default value
+  const [field5, setField5] = useState<Date | string>(initialStudent.field5); 
   const [selectedGrade, setSelectedGrade] = useState<Grade | null>(initialStudent);
   const [history, setHistory] = useState<HistoryItem[]>([]);
 
@@ -62,7 +62,7 @@ const GradeManagementSystem: React.FC = () => {
       facultyNumber: field2,
       subject: field3,
       grade: field4,
-      field5: new Date(field5), // Parse the field5 string input to Date object
+      field5: new Date(field5), 
     };
 
     setGrades([...grades, newGrade]);
@@ -78,7 +78,7 @@ const GradeManagementSystem: React.FC = () => {
     setField2('');
     setField3('');
     setField4('');
-    setField5(new Date()); // Reset field5 to current date
+    setField5(new Date()); 
   };
 
   const deleteButton = (id: number) => {
@@ -127,7 +127,7 @@ const GradeManagementSystem: React.FC = () => {
             <input
               type="text"
               placeholder="Enter Name"
-              id="field1" // Added id attribute
+              id="field1" 
               value={field1}
               onChange={handleNameChange}
             />
@@ -138,7 +138,7 @@ const GradeManagementSystem: React.FC = () => {
             <input
               type="text"
               placeholder="Enter Faculty Number"
-              id="field2" // Added id attribute
+              id="field2" 
               value={field2}
               onChange={handleFacultyNumberChange}
             />
@@ -149,7 +149,7 @@ const GradeManagementSystem: React.FC = () => {
             <input
               type="text"
               placeholder="Enter Subject"
-              id="field3" // Added id attribute
+              id="field3"
               value={field3}
               onChange={handleSubjectChange}
             />
@@ -160,7 +160,7 @@ const GradeManagementSystem: React.FC = () => {
             <input
               type="number"
               placeholder="Enter Grade"
-              id="field4" // Added id attribute
+              id="field4" 
               value={field4}
               onChange={handleGradeChange}
             />
@@ -170,7 +170,7 @@ const GradeManagementSystem: React.FC = () => {
             <label htmlFor="dateInput">Date:</label>
             <input
               type="date"
-              id="field5" // Added id attribute
+              id="field5" 
               value={field5 instanceof Date ? field5.toISOString().slice(0, 10) : field5}
               onChange={handleField5Change}
             />
